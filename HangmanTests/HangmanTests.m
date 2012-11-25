@@ -31,10 +31,23 @@
 {
     WordUpdateRegistrar* wordUpdateRegistrar = [[WordUpdateRegistrar alloc] init];
 
+    {
+
     GameEngine* game = [[GameEngine alloc] initWithWord: @"A" andWordUpdateHandler: wordUpdateRegistrar];
     [game guessLetter: @"B"];
 
     STAssertEqualObjects(wordUpdateRegistrar.word, @"_", @"");
+
+    }
+
+    {
+
+    GameEngine* game = [[GameEngine alloc] initWithWord: @"AA" andWordUpdateHandler: wordUpdateRegistrar];
+    [game guessLetter: @"B"];
+
+    STAssertEqualObjects(wordUpdateRegistrar.word, @"__", @"");
+
+    }
 }
 
 @end

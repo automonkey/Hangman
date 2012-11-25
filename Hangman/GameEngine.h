@@ -14,6 +14,7 @@
 {
 @public
     NSString* word;
+    NSString* guessedWord;
 
     WordUpdateHandler* wordUpdateHandler;
 }

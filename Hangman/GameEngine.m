@@ -16,6 +16,7 @@
     {
         self->word = word_;
         self->wordUpdateHandler = wordUpdateHandler_;
+        self->guessedWord = [@"" stringByPaddingToLength:[word_ length] withString:@"_" startingAtIndex:0];
     }
 
     return self;
@@ -28,7 +29,7 @@
 
 - (void)guessLetter:(NSString *)letter_
 {
-    [wordUpdateHandler wordUpdated:@"_"];
+    [wordUpdateHandler wordUpdated:guessedWord];
 }
 
 @end
