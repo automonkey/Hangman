@@ -29,6 +29,15 @@
 
 - (void)guessLetter:(NSString *)letter_
 {
+    if([word rangeOfString:letter_].location == NSNotFound)
+    {
+        guessedWord = [@"" stringByPaddingToLength:[word length] withString:@"_" startingAtIndex:0];
+    }
+    else
+    {
+        guessedWord = [letter_ stringByPaddingToLength:[word length] withString:@"_" startingAtIndex:0];
+    }
+
     [wordUpdateHandler wordUpdated:guessedWord];
 }
 

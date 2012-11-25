@@ -50,4 +50,27 @@
     }
 }
 
+- (void)testGuessingCorrectLetterShouldShowGuessedLetterInReportedWordState
+{
+    WordUpdateRegistrar* wordUpdateRegistrar = [[WordUpdateRegistrar alloc] init];
+
+    {
+
+    GameEngine* game = [[GameEngine alloc] initWithWord: @"AB" andWordUpdateHandler: wordUpdateRegistrar];
+    [game guessLetter: @"A"];
+
+    STAssertEqualObjects(wordUpdateRegistrar.word, @"A_", @"");
+
+    }
+
+    {
+
+    GameEngine* game = [[GameEngine alloc] initWithWord: @"BA" andWordUpdateHandler: wordUpdateRegistrar];
+    [game guessLetter: @"B"];
+
+    STAssertEqualObjects(wordUpdateRegistrar.word, @"B_", @"");
+
+    }
+}
+
 @end
