@@ -8,6 +8,9 @@
 
 #import "HangmanTests.h"
 
+#import "GameEngine.h"
+#import "WordUpdateRegistrar.h"
+
 @implementation HangmanTests
 
 - (void)setUp
@@ -24,9 +27,14 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testGuessingLetterShouldReportWordState
 {
-    STFail(@"Unit tests are not implemented yet in HangmanTests");
+    WordUpdateRegistrar* wordUpdateRegistrar = [[WordUpdateRegistrar alloc] init];
+
+    GameEngine* game = [[GameEngine alloc] initWithWord: @"A" andWordUpdateHandler: wordUpdateRegistrar];
+    [game guessLetter: @"B"];
+
+    STAssertEqualObjects(wordUpdateRegistrar.word, @"_", @"");
 }
 
 @end
