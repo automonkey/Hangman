@@ -73,4 +73,14 @@
     }
 }
 
+- (void)testGuessingCorrectLetterShouldShowAllInstancesOfGuessedLetterInReportedWordState
+{
+    WordUpdateRegistrar* wordUpdateRegistrar = [[WordUpdateRegistrar alloc] init];
+
+    GameEngine* game = [[GameEngine alloc] initWithWord: @"BAB" andWordUpdateHandler: wordUpdateRegistrar];
+    [game guessLetter: @"B"];
+
+    STAssertEqualObjects(wordUpdateRegistrar.word, @"B_B", @"");
+}
+
 @end

@@ -27,15 +27,21 @@
     return nil;
 }
 
-- (void)guessLetter:(NSString *)letter_
+- (void)guessLetter:(NSString *)letter
 {
-    if([word rangeOfString:letter_].location == NSNotFound)
+    NSUInteger wordLength = [word length];
+
+    guessedWord = [@"" stringByPaddingToLength:wordLength withString:@"_" startingAtIndex:0];
+
+    NSRange range = NSMakeRange(0, wordLength);
+    while(range.location != NSNotFound)
     {
-        guessedWord = [@"" stringByPaddingToLength:[word length] withString:@"_" startingAtIndex:0];
-    }
-    else
-    {
-        guessedWord = [letter_ stringByPaddingToLength:[word length] withString:@"_" startingAtIndex:0];
+        range = [word rangeOfString:letter options:0 range:range];
+        if(range.location != NSNotFound)
+        {
+            guessedWord = [guessedWord stringByReplacingCharactersInRange:range withString:letter];
+            range = NSMakeRange(range.location + range.length, wordLength - (range.location + range.length));
+        }
     }
 
     [wordUpdateHandler wordUpdated:guessedWord];
