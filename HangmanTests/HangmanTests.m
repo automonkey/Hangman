@@ -83,4 +83,15 @@
     STAssertEqualObjects(wordUpdateRegistrar.word, @"B_B", @"");
 }
 
+- (void)testGuessingMultipleCorrectLettersShouldShowAllInReportedWordState
+{
+    WordUpdateRegistrar* wordUpdateRegistrar = [[WordUpdateRegistrar alloc] init];
+
+    GameEngine* game = [[GameEngine alloc] initWithWord: @"ABC" andWordUpdateHandler: wordUpdateRegistrar];
+    [game guessLetter: @"A"];
+    [game guessLetter: @"B"];
+
+    STAssertEqualObjects(wordUpdateRegistrar.word, @"AB_", @"");
+}
+
 @end

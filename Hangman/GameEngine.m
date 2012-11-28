@@ -29,9 +29,7 @@
 
 - (void)guessLetter:(NSString *)letter
 {
-    NSUInteger wordLength = [word length];
-
-    guessedWord = [@"" stringByPaddingToLength:wordLength withString:@"_" startingAtIndex:0];
+    NSUInteger wordLength = [guessedWord length];
 
     NSRange range = NSMakeRange(0, wordLength);
     while(range.location != NSNotFound)
