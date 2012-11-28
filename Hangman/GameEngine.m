@@ -17,6 +17,8 @@
         self->word = word_;
         self->wordUpdateHandler = wordUpdateHandler_;
         self->guessedWord = [@"" stringByPaddingToLength:[word_ length] withString:@"_" startingAtIndex:0];
+
+        [wordUpdateHandler wordUpdated:guessedWord];
     }
 
     return self;

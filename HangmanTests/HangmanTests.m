@@ -27,6 +27,14 @@
     [super tearDown];
 }
 
+- (void)testInitialisingGameReportsWordState
+{
+    WordUpdateRegistrar* wordUpdateRegistrar = [[WordUpdateRegistrar alloc] init];
+    (void)[[GameEngine alloc] initWithWord: @"AAA" andWordUpdateHandler: wordUpdateRegistrar];
+
+    STAssertEqualObjects(wordUpdateRegistrar.word, @"___", @"");
+}
+
 - (void)testGuessingLetterShouldReportWordState
 {
     WordUpdateRegistrar* wordUpdateRegistrar = [[WordUpdateRegistrar alloc] init];
