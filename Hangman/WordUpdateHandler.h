@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WordUpdateHandler : NSObject
-
+@protocol WordUpdateHandler <NSObject>
+@required
 - (void)wordUpdated:(NSString *)word;
 
 @end

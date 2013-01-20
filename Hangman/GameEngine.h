@@ -16,10 +16,10 @@
     NSString* word;
     NSString* guessedWord;
 
-    WordUpdateHandler* wordUpdateHandler;
+    id <WordUpdateHandler> wordUpdateHandler;
 }
 
-- (id)initWithWord:(NSString *)word andWordUpdateHandler: (WordUpdateHandler *)wordUpdateHandler;
+- (id)initWithWord:(NSString *)word andWordUpdateHandler: (id <WordUpdateHandler>)wordUpdateHandler;
 - (id)init;
 
 - (void)guessLetter:(NSString *)letter;

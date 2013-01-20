@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "WordUpdateHandler.h"
 
-@interface WordUpdateRegistrar : WordUpdateHandler
+@interface WordUpdateRegistrar : NSObject<WordUpdateHandler>
 {
 @private
     NSString* word;

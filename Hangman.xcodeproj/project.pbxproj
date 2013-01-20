@@ -26,8 +26,6 @@
 		7EBA8D60165ED69F00D0638C /* HangmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA8D5F165ED69F00D0638C /* HangmanTests.m */; };
 		7EBA8D6B165ED78500D0638C /* GameEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA8D6A165ED78500D0638C /* GameEngine.m */; };
 		7EBA8D7216618FA800D0638C /* WordUpdateRegistrar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA8D7116618FA800D0638C /* WordUpdateRegistrar.m */; };
-		7EBA8D7A1662B1AD00D0638C /* WordUpdateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA8D791662B1AD00D0638C /* WordUpdateHandler.m */; };
-		7EBA8D7B1662B1AD00D0638C /* WordUpdateHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA8D791662B1AD00D0638C /* WordUpdateHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +67,6 @@
 		7EBA8D7016618FA800D0638C /* WordUpdateRegistrar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordUpdateRegistrar.h; sourceTree = "<group>"; };
 		7EBA8D7116618FA800D0638C /* WordUpdateRegistrar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordUpdateRegistrar.m; sourceTree = "<group>"; };
 		7EBA8D781662B1AD00D0638C /* WordUpdateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordUpdateHandler.h; sourceTree = "<group>"; };
-		7EBA8D791662B1AD00D0638C /* WordUpdateHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordUpdateHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +136,6 @@
 				7EBA8D69165ED78500D0638C /* GameEngine.h */,
 				7EBA8D6A165ED78500D0638C /* GameEngine.m */,
 				7EBA8D781662B1AD00D0638C /* WordUpdateHandler.h */,
-				7EBA8D791662B1AD00D0638C /* WordUpdateHandler.m */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -294,7 +290,6 @@
 				7EBA8D3C165ED69E00D0638C /* AppDelegate.m in Sources */,
 				7EBA8D4B165ED69E00D0638C /* ViewController.m in Sources */,
 				7EBA8D6B165ED78500D0638C /* GameEngine.m in Sources */,
-				7EBA8D7A1662B1AD00D0638C /* WordUpdateHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +299,6 @@
 			files = (
 				7EBA8D60165ED69F00D0638C /* HangmanTests.m in Sources */,
 				7EBA8D7216618FA800D0638C /* WordUpdateRegistrar.m in Sources */,
-				7EBA8D7B1662B1AD00D0638C /* WordUpdateHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

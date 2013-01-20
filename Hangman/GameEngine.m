@@ -10,7 +10,7 @@
 
 @implementation GameEngine
 
-- (id)initWithWord:(NSString *)word_ andWordUpdateHandler: (WordUpdateHandler *)wordUpdateHandler_
+- (id)initWithWord:(NSString *)word_ andWordUpdateHandler: (id <WordUpdateHandler>)wordUpdateHandler_
 {
     if(self = [super init])
     {
