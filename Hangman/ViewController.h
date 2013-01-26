@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameEngine.h"
+#import "WordUpdateHandler.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <WordUpdateHandler>
+{
+@private
+    GameEngine* gameEngine;
+    IBOutlet UILabel *guessedWord;
+}
+
+- (IBAction)letterPressed:(UIButton*)sender;
 
 @end
