@@ -12,7 +12,7 @@
 
 @interface GameEngine : NSObject
 {
-@public
+@private
     NSString* word;
     NSString* guessedWord;
 
